@@ -9,7 +9,7 @@ class LanguageModel(AbstractModel):
         super().__init__(data)
 
     def to_dict(self):
-        raise NotImplementedError
+        return {'name': self.data['name'], 'acronym': self.data['acronym']}
 
     @classmethod
     def list_dicts(cls):
